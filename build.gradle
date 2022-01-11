@@ -1,0 +1,12 @@
+apply plugin: 'checkstyle'
+
+checkstyle {
+    configFile = file('config/checkstyle/checkstyle.xml')
+    toolVersion = '9.2.1'
+    include 'resources/**/*.sql'
+    include 'resources/**/*.xml'
+}
+
+checkstyleSourceSet {
+    source ='resources'
+}
